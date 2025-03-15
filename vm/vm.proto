@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package proto_vm;
+// protoc --go_out=. vm.proto
+// protoc --go-grpc_out=. vm.proto
+
+option go_package = "./;proto_vm";
+
+service VMManager {
+  rpc CreateVM (CreateVMReq) returns (CreateVMResp) {} // 创建VM
+  rpc DestroyVM(DestroyVMReq) returns (DestroyVMResp) {} // 销毁VM
+}
+
+message CreateVMReq {
+}
+
+message CreateVMResp {
+  bool result = 1;
+}
+
+message DestroyVMReq {
+}
+
+message DestroyVMResp {
+  bool result = 1;
+}
