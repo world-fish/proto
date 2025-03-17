@@ -9,6 +9,10 @@ option go_package = "./;proto_vm";
 service VMManager {
   rpc CreateVM (CreateVMReq) returns (CreateVMResp) {} // 创建VM
   rpc DestroyVM(DestroyVMReq) returns (DestroyVMResp) {} // 销毁VM
+  rpc StartVM(StartVMReq) returns (StartVMResp) {}// 启动虚拟机
+  rpc StopVM(StopVMReq) returns (StopVMResp) {}// 关闭虚拟机
+  rpc RenewVM(RenewVMReq) returns (RenewVMResp) {}// 虚拟机续期
+  rpc GetVMInfo(GetVMInfoReq) returns (GetVMInfoResp) {}// 获取虚拟机信息
 }
 
 message CreateVMReq {
@@ -22,5 +26,33 @@ message DestroyVMReq {
 }
 
 message DestroyVMResp {
+  bool result = 1;
+}
+
+message StartVMReq {
+}
+
+message StartVMResp {
+  bool result = 1;
+}
+
+message StopVMReq {
+}
+
+message StopVMResp {
+  bool result = 1;
+}
+
+message RenewVMReq {
+}
+
+message RenewVMResp {
+  bool result = 1;
+}
+
+message GetVMInfoReq {
+}
+
+message GetVMInfoResp {
   bool result = 1;
 }
