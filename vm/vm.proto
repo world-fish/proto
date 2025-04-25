@@ -23,7 +23,7 @@ message CreateVMResp {
 }
 
 message DestroyVMReq {
-  int64 VMID = 1;
+  string VMID = 1;
 }
 
 message DestroyVMResp {
