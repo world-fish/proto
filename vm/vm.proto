@@ -56,5 +56,4 @@ message GetVMInfoReq {
 }
 
 message GetVMInfoResp {
-  bool result = 1;
-}
+  b
