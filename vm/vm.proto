@@ -28,7 +28,9 @@ message DestroyVMReq {
 }
 
 message DestroyVMResp {
-  bool result = 1;
+  string Email = 1;
+  string VMID = 2;
+  bool result = 3;
 }
 
 message StartVMReq {
