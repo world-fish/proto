@@ -23,7 +23,8 @@ message CreateVMResp {
 }
 
 message DestroyVMReq {
-  string VMID = 1;
+  string Email = 1;
+  string VMID = 2;
 }
 
 message DestroyVMResp {
